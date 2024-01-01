@@ -3,6 +3,10 @@ var readline = require("readline");
 var rl = readline.createInterface(process.stdin, process.stdout);
 
 rl.question("Enter Bot's Token: ", async (token) => {
+  await startFunction(token);
+});
+
+async function startFunction(token) {
   token = token.replaceAll('"', "");
 
   const { Client, GatewayIntentBits } = require("discord.js");
@@ -28,4 +32,10 @@ rl.question("Enter Bot's Token: ", async (token) => {
     if (err.code == 20026) return console.log(require("chalk").green.bold("Flagged: ") + require("chalk").red.bold("true"));
     console.log(err);
   }
-});
+
+  console.log();
+
+  rl.question("Enter Bot's Token: ", async (t) => {
+    await startFunction(t);
+  });
+}
