@@ -5,6 +5,6 @@
 2. Then, you have to run ``install.bat`` file.
 3. Finally, run ``start.bat`` file.
 
-# Screenshots
+# Screenshot
 
 ![](screenshot.png)
