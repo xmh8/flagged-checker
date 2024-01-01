@@ -18,7 +18,7 @@ async function startFunction(token) {
 
     console.log(require("chalk").green.bold(`Bot's Username: ${client.user.tag}\nBot's ID: ${client.user.id}`));
 
-    const user = await client.users.fetch("925454966464860230", { force: true });
+    const user = await client.users.fetch("317048153079545856", { force: true });
 
     await user.createDM();
 
